@@ -1,17 +1,44 @@
+@use 'fonts';
 $bgColor: #24292e;
 $text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+$whiteColor: #ffffff;
+@mixin header-styles {
+  background-color: $whiteColor;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 19px;
+  margin: 20px auto;
+  padding: 0;
 }
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+* {
+  font-family: 'TT Lakes', sans-serif;
+}
+header {
+  @include header-styles;
+}
+.menu {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 40px;
+  width: 100vw;
+  margin-top: 32px;
+}
+button {
+  background-color: $whiteColor;
+  color: #7e7e82;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    border: 2px solid #b8ffec;
+  }
 }
