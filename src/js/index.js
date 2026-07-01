@@ -11,19 +11,19 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true
   }
-});
+})
 
 swiperRepair.use([Pagination])
 
-const swiperRepair = new Swiper('.swiper-repair', {
-  wrapperClass: 'swiper-wrapper-repair',
-  slideClass: 'swiper-slide__repair',
+const swiperRepair = new Swiper('.swiper.swiper-repair', {
+  wrapperClass: '.swiper-wrapper .swiper-wrapper-repair',
+  slideClass: '.swiper-slide .swiper-slide-repair',
 
   slidesPerView: 'auto',
   spaceBetween: 16,
 
   pagination: {
-    el: '.swiper-pagination-repair',
-    clickable: true,
-  },
+    el: '.swiper-pagination.swiper-pagination-repair',
+    clickable: true
+  }
 })
