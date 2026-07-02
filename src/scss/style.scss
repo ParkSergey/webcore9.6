@@ -4,6 +4,7 @@
 $blackColor: #1B1C21;
 $whiteColor: #ffffff;
 $wordcolor: #7e7e82;
+$backgroundColor:#F8F8F8;
 @mixin header-styles {
   background-color: $whiteColor;
   width: 100%;
@@ -224,6 +225,25 @@ header {
     width: 11px;
     height: 11px;
   margin-right: 10px;
+  }
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  color: $wordcolor;
+  min-width: 320px;
+  height: 129px;
+  background-color: $backgroundColor;
+  padding: 16px;
+  & p{
+    color: $wordcolor;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
   }
 }
 img.logo {
