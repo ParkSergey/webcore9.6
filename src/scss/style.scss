@@ -1,10 +1,10 @@
 @use 'fonts';
 @use '~swiper/css';
 @use '~swiper/css/pagination';
-$blackColor: #1B1C21;
+$blackColor: #1b1c21;
 $whiteColor: #ffffff;
 $wordcolor: #7e7e82;
-$backgroundColor:#F8F8F8;
+$backgroundColor: #f8f8f8;
 @mixin header-styles {
   background-color: $whiteColor;
   width: 100%;
@@ -152,7 +152,7 @@ header {
     align-self: flex-end;
   }
 }
-.swiper-wrapper .swiper-wrapper-prices{
+.swiper-wrapper .swiper-wrapper-prices {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -216,18 +216,18 @@ header {
   margin-top: 16px;
   margin-left: 16px;
 }
-.text-offer{
+.text-offer {
   width: 200px;
   height: 60px;
   font-weight: 500;
-  & img{
+  & img {
     padding-top: 0px;
     width: 11px;
     height: 11px;
-  margin-right: 10px;
+    margin-right: 10px;
   }
 }
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -239,7 +239,7 @@ header {
   height: 129px;
   background-color: $backgroundColor;
   padding: 16px;
-  & p{
+  & p {
     color: $wordcolor;
     font-weight: 500;
     font-size: 14px;
