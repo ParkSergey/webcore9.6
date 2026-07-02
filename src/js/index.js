@@ -27,3 +27,14 @@ const swiperRepair = new Swiper('.swiper.swiper-repair', {
     clickable: true
   }
 })
+const swiperPrices = new Swiper('.swiper.swiper-prices', {
+  // тут класс свайпер
+  wrapperClass: '.swiper-wrapper .swiper-wrapper-prices', 
+  slideClass: '.swiper-slide .swiper-slide-prices',
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  pagination: {
+    el: '.swiper-pagination.swiper-pagination-prices',
+    clickable: true
+  }
+})
