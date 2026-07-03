@@ -1,21 +1,8 @@
 @use 'fonts';
+@use 'variables' as *;
 @use '~swiper/css';
 @use '~swiper/css/pagination';
-$blackColor: #1b1c21;
-$whiteColor: #ffffff;
-$wordcolor: #7e7e82;
-$backgroundColor: #f8f8f8;
-@mixin header-styles {
-  background-color: $whiteColor;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 19px;
-  margin: 20px auto;
-  padding: 0;
-}
+
 * {
   font-family: 'TT Lakes', sans-serif;
 }
@@ -25,7 +12,16 @@ h1 {
   padding-top: 20px;
 }
 header {
-  @include header-styles;
+  background-color: $whiteColor;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 19px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $borderColor;
 
   & .burger-button {
     background-image: url('../img/burger.svg');
@@ -49,11 +45,21 @@ header {
     }
   }
 }
+.main-title {
+  margin: 0;
+  padding: 0;
+}
+.main-picture {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
 
 .menu {
   display: flex;
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: 40px;
   width: 100%;
@@ -74,6 +80,8 @@ header {
   }
 }
 .first-paragraph__text {
+  font-weight: 400;
+  font-size: 14px;
   width: 360px;
 }
 .continuation {
@@ -81,8 +89,7 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  margin-bottom: 100px;
-  margin-right: 40px;
+  margin-bottom: 16px;
   & .continuation-title {
     font-weight: 500;
   }
@@ -95,6 +102,7 @@ header {
   text-transform: uppercase;
   margin-top: 2px;
   margin-bottom: 16px;
+  border-top: 1px solid $borderColor;
 }
 .description-2p {
   width: 320px;
@@ -122,7 +130,7 @@ header {
   height: 72px;
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -217,9 +225,11 @@ header {
   margin-left: 16px;
 }
 .text-offer {
-  width: 200px;
+  width: 100%;
   height: 60px;
   font-weight: 500;
+  padding-right: 20px;
+  margin-left: 15px;
   & img {
     padding-top: 0px;
     width: 11px;
@@ -241,6 +251,7 @@ header {
   padding: 16px;
   & p {
     color: $wordcolor;
+    text-align: center;
     font-weight: 500;
     font-size: 14px;
     margin: 0;
