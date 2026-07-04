@@ -1,4 +1,17 @@
-.burger-button {
+@use 'variables' as *;
+header {
+  background-color: $whiteColor;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 19px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $borderColor;
+
+  & .burger-button {
     background-image: url('../img/burger.svg');
     overflow: hidden;
     outline: none;
@@ -17,28 +30,6 @@
     &:hover {
       outline: none;
       box-shadow: none;
-    }
-  }
-  .menu {
-  display: flex;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 40px;
-  width: 100%;
-  margin-top: 32px;
-  button {
-    background-color: $whiteColor;
-    color: #7e7e82;
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: default;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
-    &:hover {
-      border: 2px solid #b8ffec;
     }
   }
 }
