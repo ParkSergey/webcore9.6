@@ -67,4 +67,11 @@
     align-self: flex-end;
   }
 }
-
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: auto;
+}

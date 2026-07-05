@@ -1,0 +1,23 @@
+@use 'variables' as *;
+.swiper-wrapper.brands {
+  background-color: $backgroundGrey;
+  min-width: 320px;
+  width: 100%;
+  height: 234px;
+  margin-left: 16px;
+}
+.swiper-wrapper-repair {
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  background-color: $backgroundGrey;
+  padding: 0;
+}
+.swiper-wrapper.swiper-wrapper-prices {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: $backgroundGrey;
+}

@@ -19,7 +19,7 @@ const swiperRepair = new Swiper('.swiper.swiper-repair', {
   wrapperClass: '.swiper-wrapper .swiper-wrapper-repair',
   slideClass: '.swiper-slide .swiper-slide-repair',
 
-  slidesPerView: 'auto',
+  slidesPerView: '1',
   spaceBetween: 16,
 
   pagination: {
@@ -29,7 +29,7 @@ const swiperRepair = new Swiper('.swiper.swiper-repair', {
 })
 const swiperPrices = new Swiper('.swiper.swiper-prices', {
   // тут класс свайпер
-  wrapperClass: '.swiper-wrapper .swiper-wrapper-prices', 
+  wrapperClass: '.swiper-wrapper .swiper-wrapper-prices',
   slideClass: '.swiper-slide .swiper-slide-prices',
   slidesPerView: 'auto',
   spaceBetween: 16,
