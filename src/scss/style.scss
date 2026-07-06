@@ -1,14 +1,22 @@
 @use 'fonts';
+@use 'texts' as *;
 @use 'pictures' as *;
-@use 'wrappers'as *;
+@use 'wrappers' as *;
 @use 'slides' as *;
 @use 'buttons' as *;
 @use 'variables' as *;
 @use '~swiper/css';
 @use '~swiper/css/pagination';
-
+@media (min-width: 320px) {
+}
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'TT Lakes', sans-serif;
+}
+body {
+  background-color: $backgroundGrey;
 }
 h1 {
   display: flex;
@@ -22,7 +30,6 @@ header {
   gap: 10px;
   justify-content: space-around;
   align-items: center;
-  padding-top: 19px;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $borderColor;
@@ -47,24 +54,34 @@ header {
       outline: none;
       box-shadow: none;
     }
-
   }
 }
-.header-tablet-icons{
-      display: none;
-      width:400px;
-      display:none;
-      gap: 10px;
-      justify-content: flex-end;
-      align-items: center;
-      flex-grow: 1;
-    }
-    .header-leftside__stick{
-      display: none;
-    }
+
+.tablet-text {
+  display: none;
+}
+.header-tablet-icons {
+  display: none;
+  width: 400px;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.header-leftside__stick {
+  display: none;
+}
+.table-brands {
+  display: none;
+}
 .main-title {
   margin: 0;
   padding: 0;
+}
+.main-picture {
+  display: inline;
+  width: 320px;
+  border-radius: 6px;
 }
 .menu {
   display: flex;
@@ -94,6 +111,9 @@ header {
   font-size: 14px;
   width: 360px;
 }
+.repair {
+  display: none;
+}
 .continuation {
   font-weight: 500;
   display: flex;
@@ -104,50 +124,29 @@ header {
     font-weight: 500;
   }
 }
-.description {
-  width: 320px;
-  height: 80px;
-  font-weight: 400;
-  color: $wordcolor;
-  text-transform: uppercase;
-  margin-top: 2px;
-  margin-bottom: 16px;
-  border-top: 1px solid $borderColor;
-}
-.description-2p {
-  width: 320px;
-  height: 80px;
-  font-weight: 400;
-  color: $wordcolor;
-  text-transform: uppercase;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-.swiper {
+
+.swiper.brands {
   backround-color: $backgroundGrey;
-  padding: 16px 0;
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
-
-
-
-
-
+.swiper-wrapper.brands {
+  background-color: $backgroundGrey;
+  min-width: 320px;
+  width: 100%;
+  height: 234px;
+  margin-left: 16px;
+}
 
 .swiper-pagination.swiper-pagination-prices {
   bottom: 0;
   position: static;
 }
-
-.price-description {
-  width: 100%;
-  height: 138px;
-  font-weight: 400;
-  font-size: 14px;
-  background-color: $backgroundGrey;
-  color: $blackColor;
-  margin-top: 16px;
+.hidden-button {
+  display: none;
 }
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -167,5 +166,70 @@ header {
     font-weight: 500;
     font-size: 14px;
     margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-tablet-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+  .header-leftside__stick {
+    display: block;
+  }
+  .burger-button {
+    display: block;
+  }
+  .tablet-text {
+    display: block;
+  }
+  .hidden-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .first-paragraph {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .table-brands {
+    background-color: $backgroundGrey;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .table-brands > *:nth-child(n + 7) {
+    display: none;
+  }
+  .brands.expanded > *:nth-child(n + 7) {
+    display: flex;
+  }
+
+  .swiper.brands {
+    display: none;
+  }
+  .swiper.swiper-repair {
+    display: none;
+  }
+  .repair {
+    background-color: $backgroundGrey;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .repair > *:nth-child(n + 4) {
+    display: none;
+  }
+  .swiper.swiper-prices {
+    display: none;
   }
 }

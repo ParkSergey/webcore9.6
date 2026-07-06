@@ -12,9 +12,6 @@ const swiper = new Swiper('.swiper', {
     clickable: true
   }
 })
-
-swiperRepair.use([Pagination])
-
 const swiperRepair = new Swiper('.swiper.swiper-repair', {
   wrapperClass: '.swiper-wrapper .swiper-wrapper-repair',
   slideClass: '.swiper-slide .swiper-slide-repair',
