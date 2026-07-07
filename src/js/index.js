@@ -13,21 +13,14 @@ const swiper = new Swiper('.swiper', {
   }
 })
 const swiperRepair = new Swiper('.swiper.swiper-repair', {
-  wrapperClass: '.swiper-wrapper .swiper-wrapper-repair',
-  slideClass: '.swiper-slide .swiper-slide-repair',
-
   slidesPerView: '1',
   spaceBetween: 16,
-
   pagination: {
     el: '.swiper-pagination.swiper-pagination-repair',
     clickable: true
   }
 })
 const swiperPrices = new Swiper('.swiper.swiper-prices', {
-  // тут класс свайпер
-  wrapperClass: '.swiper-wrapper .swiper-wrapper-prices',
-  slideClass: '.swiper-slide .swiper-slide-prices',
   slidesPerView: 'auto',
   spaceBetween: 16,
   pagination: {
@@ -35,3 +28,27 @@ const swiperPrices = new Swiper('.swiper.swiper-prices', {
     clickable: true
   }
 })
+function setupToggle(buttonSelector, contentSelector) {
+  const button = document.querySelector(buttonSelector)
+  const content = document.querySelector(contentSelector)
+
+  if (!button || !content) return
+
+  const text = button.querySelector('span')
+  const icon = button.querySelector('img')
+
+  button.addEventListener('click', () => {
+    content.classList.toggle('expanded')
+
+    if (content.classList.contains('expanded')) {
+      text.textContent = 'Скрыть'
+      icon.style.transform = 'rotate(180deg)'
+    } else {
+      text.textContent = 'Показать все'
+      icon.style.transform = 'rotate(0deg)'
+    }
+  })
+}
+
+setupToggle('.brands-button', '.table-brands')
+setupToggle('.repair-button', '.repair')

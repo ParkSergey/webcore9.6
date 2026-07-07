@@ -13,6 +13,9 @@ header {
 
   & .burger-button {
     background-image: url('../img/burger.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+     background-position: center;
     overflow: hidden;
     outline: none;
     width: 50px;
@@ -37,4 +40,27 @@ header {
   display:flex;
   align-items:center;
   justify-content:center;
+}
+.menu {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 40px;
+  width: 100%;
+  margin-top: 32px;
+& button {
+    background-color: $whiteColor;
+    color: $wordcolor;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: default;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    &:hover {
+      border: 2px solid #b8ffec;
+    }
+  }
 }

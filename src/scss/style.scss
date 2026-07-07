@@ -1,5 +1,5 @@
 @use 'fonts';
-@use 'texts' as *;
+@use 'texts'as *;
 @use 'pictures' as *;
 @use 'wrappers' as *;
 @use 'slides' as *;
@@ -23,39 +23,7 @@ h1 {
   align-items: center;
   padding-top: 20px;
 }
-header {
-  background-color: $whiteColor;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid $borderColor;
 
-  & .burger-button {
-    background-image: url('../img/burger.svg');
-    overflow: hidden;
-    outline: none;
-    width: 40px;
-    height: 40px;
-    border: none;
-    box-shadow: none;
-    border-radius: 50%;
-    cursor: default;
-    &:active {
-      transform: scale(0.95);
-    }
-    svg {
-      filter: none;
-    }
-    &:hover {
-      outline: none;
-      box-shadow: none;
-    }
-  }
-}
 
 .tablet-text {
   display: none;
@@ -82,29 +50,6 @@ header {
   display: inline;
   width: 320px;
   border-radius: 6px;
-}
-.menu {
-  display: flex;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 40px;
-  width: 100%;
-  margin-top: 32px;
-  button {
-    background-color: $whiteColor;
-    color: #7e7e82;
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    cursor: default;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
-    &:hover {
-      border: 2px solid #b8ffec;
-    }
-  }
 }
 .first-paragraph__text {
   font-weight: 400;
@@ -209,7 +154,7 @@ header {
   .table-brands > *:nth-child(n + 7) {
     display: none;
   }
-  .brands.expanded > *:nth-child(n + 7) {
+  .table-brands.expanded > *:nth-child(n + 7) {
     display: flex;
   }
 
@@ -228,6 +173,9 @@ header {
   }
   .repair > *:nth-child(n + 4) {
     display: none;
+  }
+  .repair.expanded > *:nth-child(n + 4) {
+  display: flex;
   }
   .swiper.swiper-prices {
     display: none;
