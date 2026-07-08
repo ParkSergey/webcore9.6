@@ -1,5 +1,6 @@
 @use 'fonts';
-@use 'texts'as *;
+@use 'burger' as *;
+@use 'texts' as *;
 @use 'pictures' as *;
 @use 'wrappers' as *;
 @use 'slides' as *;
@@ -7,8 +8,6 @@
 @use 'variables' as *;
 @use '~swiper/css';
 @use '~swiper/css/pagination';
-@media (min-width: 320px) {
-}
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +17,22 @@
 body {
   background-color: $backgroundGrey;
 }
+.menu-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 320px;
+  height: 100vh;
+
+  background: white;
+  z-index: 100;
+}
 h1 {
   display: flex;
   align-items: center;
   padding-top: 20px;
 }
-
 
 .tablet-text {
   display: none;
@@ -71,7 +80,7 @@ h1 {
 }
 
 .swiper.brands {
-  backround-color: $backgroundGrey;
+  background-color: $backgroundGrey;
   margin: 0;
   padding: 0;
   margin-left: 0;
@@ -90,6 +99,9 @@ h1 {
   position: static;
 }
 .hidden-button {
+  display: none;
+}
+.table{
   display: none;
 }
 .footer {
@@ -175,9 +187,89 @@ h1 {
     display: none;
   }
   .repair.expanded > *:nth-child(n + 4) {
-  display: flex;
+    display: flex;
   }
   .swiper.swiper-prices {
+    display: none;
+  }
+  .table{
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 400;
+     border-collapse: collapse;
+  display: table;
+  width: 100%;
+  & td:last-child {
+  text-align: center;
+}
+  & thead {
+    border: none;
+    color:$wordcolor;
+  }
+  & tbody {
+    background-color: $whiteColor;
+    color: $blackColor;
+
+    & td {
+ border-top: 1px solid $colorBorder
+    }
+    td:last-child {
+    text-align: center;
+  }
+   td:first-child {
+    width: 45%;
+    height: 64px;
+  }
+
+  td:nth-child(2) {
+    width: 20%;
+    height: 64px;
+  }
+
+  td:nth-child(3) {
+    width: 20%;
+    height: 64px;
+  }
+
+  td:last-child {
+    width: 15%;
+    height: 64px;
+  }
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  color: $wordcolor;
+  min-width: 320px;
+  height: 129px;
+  background-color: $backgroundGrey;
+  border-top: 1px solid $borderColor;
+  padding: 16px;
+  & p {
+    color: $wordcolor;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+}
+@media (min-width: 1440px) {
+  .menu-sidebar {
+    transform: translateX(0);
+    position: static;
+    height: 100vh;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  .menu-close {
     display: none;
   }
 }

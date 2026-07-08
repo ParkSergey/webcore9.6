@@ -52,3 +52,14 @@ function setupToggle(buttonSelector, contentSelector) {
 
 setupToggle('.brands-button', '.table-brands')
 setupToggle('.repair-button', '.repair')
+const burger = document.querySelector('.burger-button')
+const menu = document.querySelector('.menu-sidebar')
+const close = document.querySelector('.menu-close')
+
+burger.addEventListener('click', () => {
+  menu.classList.add('active')
+})
+
+close.addEventListener('click', () => {
+  menu.classList.remove('active')
+})
