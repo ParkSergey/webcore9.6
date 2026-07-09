@@ -259,16 +259,26 @@ h1 {
 }
 }
 @media (min-width: 1440px) {
+   body {
+    display: flex;
+    align-items: flex-start;
+  }
+
   .menu-sidebar {
+    position: static; // или static
+    top: 0;
     transform: translateX(0);
-    position: static;
+    width: 320px;
     height: 100vh;
+    flex-shrink: 0;
   }
 
-  .burger-button {
-    display: none;
+  .page-content {
+    flex: 1;
+    margin-left: 0;
   }
 
+  .burger-button,
   .menu-close {
     display: none;
   }
