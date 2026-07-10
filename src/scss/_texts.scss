@@ -2,7 +2,9 @@
 .description {
   width: 100%;
   height: 80px;
+   text-align: center;
   font-weight: 400;
+  padding: 16px;
   background: gradient(to right, $backgroundGrey, $whiteColor);
   color: $wordcolor;
   text-transform: uppercase;
@@ -13,6 +15,8 @@
 .description-2p {
   width: 320px;
   height: 80px;
+  padding: 16px;
+   text-align: center;
   font-weight: 400;
    background: gradient(to right, $backgroundGrey, $whiteColor);
   color: $wordcolor;
@@ -25,9 +29,13 @@
   height: 138px;
   font-weight: 400;
   font-size: 14px;
+  padding-left: 16px;
    background: gradient(to right, $backgroundGrey, $whiteColor);
   background-color: $backgroundGrey;
   color: $blackColor;
   margin-top: 16px;
+}
+.text-offer {
+  padding-left: 16px;
 }
 

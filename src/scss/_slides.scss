@@ -1,11 +1,10 @@
 @use 'variables' as *;
-.swiper-slide,
-.brand-card-slide {
+.swiper-slide.brand-card-slide {
   width: 240px;
-  height: 72px;
+  height: 72px ;
   text-align: center;
   font-size: 18px;
-  background-color: #fff;
+  background-color: $whiteColor;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,10 +15,10 @@
 .table-brands {
   & .swiper-slide {
     width: 240px;
-    height: 72px;
+    height: 160px;
     text-align: center;
     font-size: 18px;
-    background-color: #fff;
+    background-color: $whiteColor;
     display: flex;
     justify-content: space-between;
     align-items: center;

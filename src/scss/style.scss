@@ -17,6 +17,9 @@
 body {
   background-color: $backgroundGrey;
 }
+.page-content {
+  padding-left: 16px;
+}
 .menu-sidebar {
   position: fixed;
   left: 0;
@@ -294,7 +297,7 @@ body.menu-open .overlay {
   }
 
   .menu-sidebar {
-    position: static; // или static
+    position: fixed; // или static
     top: 0;
     transform: translateX(0);
     width: 320px;
@@ -318,10 +321,20 @@ body.menu-open .overlay {
   }
   .page-content {
     flex: 1;
-    margin-left: 0;
+    margin-left: 320px;
   }
   .text-desktop {
     display: inline;
+  }
+  .table-brands {
+    background-color: $backgroundGrey;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .table-brands > *:nth-child(n + 10) {
+    display: none;
   }
   .no-wrap {
     font-size: 16px;
@@ -330,5 +343,8 @@ body.menu-open .overlay {
   .burger-button,
   .menu-close {
     display: none;
+  }
+  .table {
+    width: 50%;
   }
 }
