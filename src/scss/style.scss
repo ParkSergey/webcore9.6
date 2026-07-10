@@ -23,15 +23,33 @@ body {
   top: 0;
 
   width: 320px;
-  height: 100vh;
+  height: 100%;
 
   background: white;
   z-index: 100;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9); // затемнение
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 99;
 }
 h1 {
   display: flex;
   align-items: center;
   padding-top: 20px;
+}
+body.menu-open .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.text-desktop {
+  display: none;
 }
 
 .tablet-text {
@@ -52,6 +70,8 @@ h1 {
   display: none;
 }
 .main-title {
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -101,7 +121,10 @@ h1 {
 .hidden-button {
   display: none;
 }
-.table{
+.table {
+  display: none;
+}
+.main-title__icons {
   display: none;
 }
 .footer {
@@ -142,6 +165,12 @@ h1 {
   .tablet-text {
     display: block;
   }
+  .text-desktop {
+    display: none;
+  }
+  .main-title__icons {
+    display: none;
+  }
   .hidden-button {
     display: flex;
     align-items: center;
@@ -150,7 +179,7 @@ h1 {
   .first-paragraph {
     font-family: 'TT Lakes';
     font-size: 14px;
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: flex-start;
@@ -192,74 +221,74 @@ h1 {
   .swiper.swiper-prices {
     display: none;
   }
-  .table{
+  .table {
     font-family: 'TT Lakes', sans-serif;
     font-weight: 400;
-     border-collapse: collapse;
-  display: table;
-  width: 100%;
-  & td:last-child {
-  text-align: center;
-}
-  & thead {
-    border: none;
-    color:$wordcolor;
-  }
-  & tbody {
-    background-color: $whiteColor;
-    color: $blackColor;
-
-    & td {
- border-top: 1px solid $colorBorder
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+    & td:last-child {
+      text-align: center;
     }
-    td:last-child {
-    text-align: center;
-  }
-   td:first-child {
-    width: 45%;
-    height: 64px;
-  }
+    & thead {
+      border: none;
+      color: $wordcolor;
+    }
+    & tbody {
+      background-color: $whiteColor;
+      color: $blackColor;
 
-  td:nth-child(2) {
-    width: 20%;
-    height: 64px;
-  }
+      & td {
+        border-top: 1px solid $colorBorder;
+      }
+      td:last-child {
+        text-align: center;
+      }
+      td:first-child {
+        width: 45%;
+        height: 64px;
+      }
 
-  td:nth-child(3) {
-    width: 20%;
-    height: 64px;
-  }
+      td:nth-child(2) {
+        width: 20%;
+        height: 64px;
+      }
 
-  td:last-child {
-    width: 15%;
-    height: 64px;
+      td:nth-child(3) {
+        width: 20%;
+        height: 64px;
+      }
+
+      td:last-child {
+        width: 15%;
+        height: 64px;
+      }
+    }
   }
-  }
-}
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  color: $wordcolor;
-  min-width: 320px;
-  height: 129px;
-  background-color: $backgroundGrey;
-  border-top: 1px solid $borderColor;
-  padding: 16px;
-  & p {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
     color: $wordcolor;
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    margin: 0;
+    min-width: 320px;
+    height: 129px;
+    background-color: $backgroundGrey;
+    border-top: 1px solid $borderColor;
+    padding: 16px;
+    & p {
+      color: $wordcolor;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      margin: 0;
+    }
   }
-}
 }
 @media (min-width: 1440px) {
-   body {
+  body {
     display: flex;
     align-items: flex-start;
   }
@@ -270,14 +299,34 @@ h1 {
     transform: translateX(0);
     width: 320px;
     height: 100vh;
+    box-shadow: none;
     flex-shrink: 0;
   }
-
+  .main-title__icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header {
+    display: none;
+  }
+  .main-title__headline {
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 30px;
+    align-items: center;
+  }
   .page-content {
     flex: 1;
     margin-left: 0;
   }
-
+  .text-desktop {
+    display: inline;
+  }
+  .no-wrap {
+    font-size: 16px;
+    font-weight: 500;
+  }
   .burger-button,
   .menu-close {
     display: none;

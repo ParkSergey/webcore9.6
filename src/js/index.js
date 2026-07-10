@@ -55,11 +55,19 @@ setupToggle('.repair-button', '.repair')
 const burger = document.querySelector('.burger-button')
 const menu = document.querySelector('.menu-sidebar')
 const close = document.querySelector('.menu-close')
+const overlay = document.querySelector('.overlay')
 
 burger.addEventListener('click', () => {
   menu.classList.add('active')
+  document.body.classList.add('menu-open')
 })
 
 close.addEventListener('click', () => {
   menu.classList.remove('active')
+  document.body.classList.remove('menu-open')
+})
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('active')
+  document.body.classList.remove('menu-open')
 })
