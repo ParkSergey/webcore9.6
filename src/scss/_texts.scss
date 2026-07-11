@@ -1,7 +1,7 @@
 @use 'variables' as *;
 .description {
   width: 100%;
-  height: 80px;
+  height: 56px;
    text-align: left;
   font-weight: 400;
   padding: 16px;
@@ -12,9 +12,22 @@
   margin-bottom: 16px;
   border-top: 1px solid $borderColor;
 }
-.description-price {
-  width: 320px;
-  height: 80px;
+.description-2p {
+   width: 100%;
+  height: 56px;
+   text-align: left;
+  font-weight: 400;
+  padding: 16px;
+   background: linear-gradient(to right, $backgroundGrey, $whiteColor);
+  color: $wordcolor;
+   text-transform: uppercase;
+  margin-top: 2px;
+  margin-bottom: 16px;
+  border-top: 1px solid $borderColor;
+}
+.text-price {
+  width: 100%;
+  height: 56px;
   padding: 16px;
    text-align: left;
   font-weight: 400;

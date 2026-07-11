@@ -75,7 +75,6 @@ body.menu-open .overlay {
 .main-title__headline {
   font-weight: 700;
   font-size: 28px;
-  display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -110,6 +109,16 @@ body.menu-open .overlay {
   padding: 0;
   margin-left: 0;
   padding-left: 0;
+}
+.main-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.main-title__headline {
+  display: block;
+  margin: 0;
+  line-height: 1;
 }
 .swiper-wrapper.brands {
   background-color: $backgroundGrey;
@@ -194,7 +203,7 @@ body.menu-open .overlay {
     background-color: $backgroundGrey;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 260px);
     grid-template-rows: repeat(2, auto);
   }
   .table-brands > *:nth-child(n + 7) {
@@ -220,6 +229,10 @@ body.menu-open .overlay {
   .repair > *:nth-child(n + 4) {
     display: none;
   }
+  .menu-buttons {
+    margin-bottom: 24px;
+    height: 63px;
+  }
   .repair.expanded > *:nth-child(n + 4) {
     display: flex;
   }
@@ -236,6 +249,8 @@ body.menu-open .overlay {
       text-align: center;
     }
     & thead {
+      font-size: 14px;
+      font-weight: 500;
       border: none;
       color: $wordcolor;
     }
@@ -297,7 +312,7 @@ body.menu-open .overlay {
     display: flex;
     align-items: flex-start;
   }
-.menu-buttons
+
   .menu-sidebar {
     position: fixed; // или static
     top: 0;
@@ -318,7 +333,6 @@ body.menu-open .overlay {
   .main-title__headline {
     font-size: 28px;
     font-weight: 700;
-    padding-top: 30px;
     align-items: center;
   }
   .page-content {
@@ -332,12 +346,20 @@ body.menu-open .overlay {
     background-color: $backgroundGrey;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 260px);
     grid-template-rows: repeat(2, auto);
   }
-  .table-brands > *:nth-child(n + 10) {
+  .table-brands > *:nth-child(n + 7) {
+    display: flex;
+  }
+
+  .table-brands > *:nth-child(n + 9) {
     display: none;
   }
+  .table-brands.expanded > *:nth-child(n + 9) {
+    display: flex;
+  }
+
   .no-wrap {
     font-size: 16px;
     font-weight: 500;
@@ -347,6 +369,9 @@ body.menu-open .overlay {
     display: none;
   }
   .table {
-    width: 50%;
+    width: 1056px;
+    height: 324px;
+    padding: 24px;
   }
 }
+
