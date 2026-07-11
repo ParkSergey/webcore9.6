@@ -72,7 +72,9 @@ body.menu-open .overlay {
 .table-brands {
   display: none;
 }
-.main-title {
+.main-title__headline {
+  font-weight: 700;
+  font-size: 28px;
   display: flex;
   align-items: center;
   margin: 0;
@@ -295,7 +297,7 @@ body.menu-open .overlay {
     display: flex;
     align-items: flex-start;
   }
-
+.menu-buttons
   .menu-sidebar {
     position: fixed; // или static
     top: 0;

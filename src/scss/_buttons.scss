@@ -41,7 +41,7 @@ header {
   align-items:center;
   justify-content:center;
 }
-.menu {
+.menu-buttons{
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -50,6 +50,7 @@ header {
   width: 100%;
   margin-top: 32px;
 & button {
+  height: 50px;
     background-color: $whiteColor;
     color: $wordcolor;
     border: none;

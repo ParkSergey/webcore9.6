@@ -1,7 +1,20 @@
 @use 'variables' as *;
+.swiper-slide.brands {
+  width: 240px;
+  height: 72px !important;
+  text-align: center;
+  font-size: 18px;
+  background-color: $whiteColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 16px;
+  border: 1px solid $colorBorder;
+  margin: 0;
+}
 .swiper-slide.brand-card-slide {
   width: 240px;
-  height: 72px ;
+  height: 72px !important;
   text-align: center;
   font-size: 18px;
   background-color: $whiteColor;
