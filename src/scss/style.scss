@@ -93,6 +93,9 @@ body.menu-open .overlay {
   display: none;
 }
 .continuation {
+  color: $blackColor;
+  line-height: 24px;
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   flex-wrap: nowrap;
