@@ -359,7 +359,20 @@ body.menu-open .overlay {
   .table-brands.expanded > *:nth-child(n + 9) {
     display: flex;
   }
+  .repair {
+    background-color: $backgroundGrey;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .repair > *:nth-child(n + 4) {
+    display: flex !important;
+  }
 
+  .repair > *:nth-child(n + 5) {
+    display: none !important;
+  }
   .no-wrap {
     padding-left: 16px;
     font-size: 16px;
@@ -369,9 +382,7 @@ body.menu-open .overlay {
   .menu-close {
     display: none;
   }
-  .table {
-    width: 1056px;
-    height: 324px;
-    padding: 24px;
+  .test-desktop {
+    color: red;
   }
 }
