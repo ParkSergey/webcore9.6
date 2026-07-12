@@ -366,12 +366,15 @@ body.menu-open .overlay {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
   }
-  .repair > *:nth-child(n + 4) {
-    display: flex !important;
+   .repair > *:nth-child(4) {
+    display: flex;
   }
 
-  .repair > *:nth-child(n + 5) {
-    display: none !important;
+   .repair > *:nth-child(n + 5) {
+    display: none;
+  }
+  .repair.expanded > *:nth-child(n + 5) {
+    display: flex;
   }
   .no-wrap {
     padding-left: 16px;
