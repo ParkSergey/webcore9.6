@@ -363,7 +363,7 @@ body.menu-open .overlay {
     background-color: $backgroundGrey;
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 260px);
     grid-template-rows: repeat(2, auto);
   }
   .repair > *:nth-child(4) {
@@ -385,5 +385,4 @@ body.menu-open .overlay {
   .menu-close {
     display: none;
   }
-  
 }
