@@ -89,6 +89,9 @@ body.menu-open .overlay {
   font-size: 14px;
   width: 360px;
 }
+.first-paragraph__text-container {
+  flex: 0 1 490px;
+}
 .repair {
   display: none;
 }
@@ -202,7 +205,7 @@ body.menu-open .overlay {
     height: auto;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    gap: 36px;
   }
   .table-brands {
     background-color: $backgroundGrey;
@@ -347,9 +350,11 @@ body.menu-open .overlay {
     margin-left: 320px;
   }
   .main-picture {
-    width: 618px;
-    height: 307px;
+    width: 531px;
+    margin-right: 36px;
+    height: 383px;
     object-fit: cover;
+    flex-shrink: 0;
   }
   .text-desktop {
     display: inline;
