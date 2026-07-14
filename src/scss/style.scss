@@ -102,7 +102,9 @@ body.menu-open .overlay {
   justify-content: flex-start;
   margin-bottom: 16px;
   & .continuation-title {
+    text-align: center;
     font-weight: 500;
+    font-size: 16px;
   }
 }
 
@@ -246,6 +248,7 @@ body.menu-open .overlay {
     font-family: 'TT Lakes', sans-serif;
     font-weight: 400;
     border-collapse: collapse;
+    margin-top: 47px;
     display: table;
     width: 100%;
     & td:last-child {
@@ -326,6 +329,7 @@ body.menu-open .overlay {
     flex-shrink: 0;
   }
   .main-title__icons {
+    gap: 8px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -341,6 +345,11 @@ body.menu-open .overlay {
   .page-content {
     flex: 1;
     margin-left: 320px;
+  }
+  .main-picture {
+    width: 618px;
+    height: 307px;
+    object-fit: cover;
   }
   .text-desktop {
     display: inline;
